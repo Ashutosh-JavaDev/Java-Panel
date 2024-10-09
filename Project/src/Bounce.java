@@ -70,12 +70,18 @@ class BounceFrame extends JFrame {
         panel = new BallPanel();
         add(panel, BorderLayout.CENTER);
         JPanel buttonpanel = new JPanel();
-        addButton(buttonpanel, "Start");
-        new ActionListener() {
-            public void acttionPerformed(ActionEvent event) {
+        addButton(buttonpanel, "Start",
+        new  ActionListener() {
+            public void actionPerformed(ActionEvent event){
                 addBall();
             }
-        };
+        });
+        addButton(buttonPanel,"Close",
+        new ActionListener() {
+            public void actionPerformed(ActionEvent event){
+                System.exit(0);
+            }
+        });
     }
 
 }
