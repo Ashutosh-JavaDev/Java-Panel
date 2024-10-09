@@ -20,8 +20,22 @@ class Ball{
             x=bounds.getMinX();
             dx=-dx;
         }
-        if(x+XSIZE>=bounds.getmax()){
-            
+        if(x+XSIZE>=bounds.getMaxX()){
+            x=bounds.getMaxX()-XSIZE;
+            dx=-dx;
         }
+        if(y<bounds.getMinY()){
+            y=bounds.getMinY();
+            dy=-dy;
+        }
+        if(y+YSIZE>=bounds.getMaxY()){
+            y=bounds.getMaxX()-YSIZE;
+            dy=-dy;
+        }
+    }
+}
+public Ellipse2D getShape(){
+    return new Ellipse2D.Double(x,y,XSIZE,YSIZE) ;{
+        
     }
 }
