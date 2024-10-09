@@ -69,8 +69,8 @@ class BounceFrame extends JFrame {
         setTitle("Bounce");
         panel = new BallPanel();
         add(panel, BorderLayout.CENTER);
-        JPanel buttonpanel = new JPanel();
-        addButton(buttonpanel, "Start",
+        JPanel buttonPanel = new JPanel();
+        addButton(buttonPanel, "Start",
                 new ActionListener() {
                     public void actionPerformed(ActionEvent event) {
                         addBall();
@@ -95,7 +95,7 @@ class BounceFrame extends JFrame {
         try{
             Ball ball=new Ball();
             panel.add(ball);
-            for(iint i=1;i<=STEPS;i++){
+            for(int i=1;i<=STEPS;i++){
                 ball.move(panel.getBounds());
                 panel.paint(panel.getGraphics());
              Thread.sleep(DELAY);
