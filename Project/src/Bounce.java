@@ -63,5 +63,7 @@ class BounceFrame extends JFrame{
     public BounceFrame(){
     setSize(DEFAULT_WIDTH,DEFAULT_HEIGHT);
     setTitle("Bounce");
+    panel=new BallPanel();
+    add(panel,BorderLayout.CENTER);
     }
 }
