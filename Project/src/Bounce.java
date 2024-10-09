@@ -57,4 +57,5 @@ class BallPanel extends JPanel{
             g2.fill(b.getShape());
         }
     }
+    private ArrayList<Ball>balls=new ArrayList<Ball>();
 }
