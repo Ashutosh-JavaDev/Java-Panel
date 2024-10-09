@@ -89,5 +89,15 @@ class BounceFrame extends JFrame {
         c.add(button);
         button.addActionListener(listener);
     }
-
+    public void addBall(){
+        try{
+            Ball ball=new Ball();
+            panel.add(ball);
+            for(iint i=1;i<=STEPS;i++){
+                ball.move(panel.getBounds());
+                panel.paint(panel.getGraphics());
+             Thread.sleep(DELAY);
+            }
+        }
+    }
 }
