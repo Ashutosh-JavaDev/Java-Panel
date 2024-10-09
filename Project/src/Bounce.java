@@ -16,6 +16,12 @@ class Ball{
     public void move(Rectangle2D bounds){
         x+=dx;
         y+=dy;
-        if()
+        if(x<bounds.getMinX()){
+            x=bounds.getMinX();
+            dx=-dx;
+        }
+        if(x+XSIZE>=bounds.getmax()){
+            
+        }
     }
 }
