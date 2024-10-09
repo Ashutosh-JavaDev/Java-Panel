@@ -84,5 +84,10 @@ class BounceFrame extends JFrame {
         });
         add(buttonPanel,BorderLayout.SOUTH);
     }
+    public void addButton(Container c,String title,ActionListener listener){
+        JButton button=new JButton(title);
+        c.add(button);
+        button.addActionListener(listener);
+    }
 
 }
