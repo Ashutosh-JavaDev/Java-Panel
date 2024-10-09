@@ -46,24 +46,36 @@ class Ball {
     private double dx = 1;
     private double dy = 1;
 }
-class BallPanel extends JPanel{
-    public void add(Ball b){
+
+class BallPanel extends JPanel {
+    public void add(Ball b) {
         balls.add(b);
     }
-    public void paintComponent(Graphics g){
+
+    public void paintComponent(Graphics g) {
         super.paintComponent(g);
-        Graphics2D g2=(Graphics2D)g;
-        for(Ball b:balls){
+        Graphics2D g2 = (Graphics2D) g;
+        for (Ball b : balls) {
             g2.fill(b.getShape());
         }
     }
-    private ArrayList<Ball>balls=new ArrayList<Ball>();
+
+    private ArrayList<Ball> balls = new ArrayList<Ball>();
 }
-class BounceFrame extends JFrame{
-    public BounceFrame(){
-    setSize(DEFAULT_WIDTH,DEFAULT_HEIGHT);
-    setTitle("Bounce");
-    panel=new BallPanel();
-    add(panel,BorderLayout.CENTER);
+
+class BounceFrame extends JFrame {
+    public BounceFrame() {
+        setSize(DEFAULT_WIDTH, DEFAULT_HEIGHT);
+        setTitle("Bounce");
+        panel = new BallPanel();
+        add(panel, BorderLayout.CENTER);
+        JPanel buttonpanel = new JPanel();
+        addButton(buttonpanel, "Start");
+        new ActionListener() {
+            public void acttionPerformed(ActionEvent event) {
+                addBall();
+            }
+        };
     }
+
 }
