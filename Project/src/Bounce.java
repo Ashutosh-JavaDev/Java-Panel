@@ -101,5 +101,14 @@ class BounceFrame extends JFrame {
              Thread.sleep(DELAY);
             }
         }
+        catch(InterruptedException e){
+
+        }
     }
+    private BallPanel panel;
+    public static final int DEFAULT_WIDTH=450;
+    public static final int DEFAULT_HEIGHT=350;
+    public static final int STEPS=350;
+    public static final int DELAY=350;
+
 }
