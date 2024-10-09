@@ -12,3 +12,10 @@ public class Bounce {
 
     }
 }
+class Ball{
+    public void move(Rectangle2D bounds){
+        x+=dx;
+        y+=dy;
+        if()
+    }
+}
