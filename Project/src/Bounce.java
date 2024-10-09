@@ -35,7 +35,6 @@ class Ball{
     }
 }
 public Ellipse2D getShape(){
-    return new Ellipse2D.Double(x,y,XSIZE,YSIZE) ;{
-        
-    }
+    return new Ellipse2D.Double(x,y,XSIZE,YSIZE);
 }
+private static final int XSIZE=15;
