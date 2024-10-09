@@ -59,3 +59,9 @@ class BallPanel extends JPanel{
     }
     private ArrayList<Ball>balls=new ArrayList<Ball>();
 }
+class BounceFrame extends JFrame{
+    public BounceFrame(){
+    setSize(DEFAULT_WIDTH,DEFAULT_HEIGHT);
+    setTitle("Bounce");
+    }
+}
