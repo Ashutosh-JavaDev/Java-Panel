@@ -82,6 +82,7 @@ class BounceFrame extends JFrame {
                 System.exit(0);
             }
         });
+        add(buttonPanel,BorderLayout.SOUTH);
     }
 
 }
