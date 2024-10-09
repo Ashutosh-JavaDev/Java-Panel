@@ -38,3 +38,10 @@ public Ellipse2D getShape(){
     return new Ellipse2D.Double(x,y,XSIZE,YSIZE);
 }
 private static final int XSIZE=15;
+private static final int YSIZE=15;
+private double x=0;
+private double y=0;
+private double dx=1;
+private double dy=1;
+
+
